@@ -2,16 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="ofb" class="org.springframework.jndi.JndiObjectFactoryBean">
+	<bean id="ofb" class="org.springframework.jndi.JndiObjectFactoryBean">
 
-<property name="jndiName" value="java:/comp/env/dsJndi"></property>
+		<property name="jndiName" value="java:/comp/env/dsJndi"></property>
 
-</bean>
+	</bean>
 
-<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-<property name="dataSource" ref="ofb"></property>
-</bean>
-<bean id="dao" class="com.org.dao.EmployeeDAOImpl">
-<property name="jt" ref="jt"></property>
-</bean>
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ofb"></property>
+	</bean>
+	<bean id="dao" class="com.org.dao.EmployeeDAOImpl">
+		<property name="jt" ref="jt"></property>
+	</bean>
 </beans>
