@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .button1 {
+            background-color: orangered; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 62px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+            .tb{
+                padding-left: 30pt;
+            }
+        alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<script src="angular/angular.js"></script>
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('homecontroller',function ($scope,$window) {
+        $scope.imgs="images/mobf1.jpeg";
+        $scope.fun1=function () {
+
+            $scope.imgs="images/mobf1.jpeg";
+        }
+
+        $scope.fun2=function () {
+
+            $scope.imgs="images/mobf2.jpeg";
+        }
+
+        $scope.fun3=function () {
+
+            $scope.imgs="images/mobf3.jpeg";
+        }
+         $scope.buy =function () {
+
+             $window.location="FliptKartRegister.html";
+
+         }
+         $scope.wish=function () {
+
+            alert("Item added to cart")
+
+         }
+    })
+</script>
+<body ng-app="myapp" ng-controller="homecontroller" style="background-color:#447FFF ;color:white;font-size:100% ">
+<div>
+    <table width="250" height="530"  align="left">
+        <tr>
+
+
+            <td> <!--inner table-->
+                <table width="90" height="90" border="1" align="center">
+                    <tr>
+                        <td> <img src="images/mobf1.jpeg" width="50" height="100" ng-click="fun1()"> </td>
+                    </tr>
+                    <tr>
+                        <td> <img src="images/mobf2.jpeg" width="50" height="100" ng-click="fun2()"> </td>
+
+                    </tr>
+                    <tr>
+                        <td> <img src="images/mobf3.jpeg" width="50" height="100" ng-click="fun3()"> </td>
+
+                    </tr>
+                </table>
+
+                   <!--end of inner table-->
+
+            </td>
+
+
+
+
+
+
+
+
+
+
+
+            <td>      <img ng-src="{{imgs}}" height="530" width="250"> </td>
+
+        </tr>
+
+        <tr>
+            <td>  <input type="button" value="WISHLIST" ng-class="'button' " ng-click="wish()">   </td>
+
+            <td>  <input type="button" value="BUY" ng-class="'button1' " ng-click="buy()">   </td>
+        </tr>
+
+    </table>
+
+
+<br>
+
+
+
+</div>
+
+</body>
+</html>

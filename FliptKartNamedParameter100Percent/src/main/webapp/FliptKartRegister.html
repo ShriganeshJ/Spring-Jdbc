@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+        textarea{
+            width: 25%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+        
+        .button {
+    background-color:yellow; /* Green */
+    border: none;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body style="background-color:#447FFF ;color:white;font-size:100% ">
+<div align="center">
+
+         <img src="images/fkt2.png" height="150" width="600">
+
+</div>
+<div >
+<form action="FliptkartController" method="post">
+<span> Enter Name</span> &nbsp; <input type="text" name="txtName"> <br><br>
+    <span> Enter Email</span> &nbsp; <input type="email" name="txtEmail"> <br><br>
+    <span> Enter Delivary Address </span> <br>
+    <textarea rows="6" cols="30" name="txtAdd"></textarea> <br><br>
+    <span>Enter LandMark</span><br>
+    <textarea rows="3" cols="30" name="txtLand"></textarea> <br> <br>
+    <span>Delivary option </span> <br>
+    <input type="radio" name="payment" value="CatchOnDelivary"> <span>CCD</span>
+    <input type="radio" name="payment" value="payment"> <span>Pay</span><br><br>
+    <span>Enter Mobile No</span><br>
+    <input type="text" placeholder="10 digit" name="txtMobile"><br> <br> <br>
+
+    <input type="submit" value="conform" class="button">
+
+</form>
+</div>
+
+</body>
+</html>
