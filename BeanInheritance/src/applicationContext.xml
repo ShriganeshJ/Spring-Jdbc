@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd">
+               
+               
+               <bean id="end" class="com.js.tg.Endorsment">
+               
+               <property name="updatedAge" value="24"/>
+               <property name="updatedName" value="raja"/>
+              <property name="updatedAddress" value="Hyderabad"/>
+              <property name="updatedGender" value="male"/>  
+               </bean>
+               
+               
+               <bean id="cance" class="com.js.tg.Cancellation" parent="end">
+               <property name="policyNumber" value="145214" ></property>
+               </bean>
+               
+               
+
+</beans>
