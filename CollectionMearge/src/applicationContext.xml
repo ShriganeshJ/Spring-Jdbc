@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd">
+               
+               
+               <bean id="curs" class="com.js.problem.Cource">
+               
+               <property name="subjects">
+               <list>
+               <value>computer</value>
+               <value>ENTF</value>
+               <value>OMFT</value>
+               </list>
+               </property>
+                
+               </bean>
+               
+               
+               <bean id="curs1" class="com.js.problem.Cource" parent="curs">
+               
+               <property name="subjects">
+               <list merge="true">
+               <value>computer</value>
+               <value>DPD</value>
+               <value>OPFS</value>
+               </list>
+               </property>
+                
+               </bean>
+               
+               
+             
+               
+
+</beans>

@@ -1,0 +1,9 @@
+It allows to merge the value set to "Base Bean" configuration collection property with the values set to "Child bean" configuration collection property by 
+using merge="true" attribute 
+
+
+Imp Point::
+
+Merging is possible only on collection type property
+Base bean and child bean configuration types must match to perform merging
+
